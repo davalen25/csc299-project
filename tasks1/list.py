@@ -15,17 +15,8 @@ def main():
 	if not tasks:
 		print("No tasks found.")
 		return
-	if len(sys.argv) > 1:
-		term = " ".join(sys.argv[1:]).lower()
-		filtered = [task for task in tasks if term in task['description'].lower()]
-		if not filtered:
-			print("No matching tasks found.")
-			return
-		for i, task in enumerate(filtered, 1):
-			print(f"{i}. {task['description']}")
-	else:
-		for i, task in enumerate(tasks, 1):
-			print(f"{i}. {task['description']}")
+	for i, task in enumerate(tasks, 1):
+		print(f"{i}. {task['description']}")
 
 if __name__ == "__main__":
 	main()

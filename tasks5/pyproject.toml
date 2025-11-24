@@ -3,10 +3,13 @@ name = "names"
 version = "0.1.0"
 description = "CLI tool to store and list people's names with persistent JSON storage"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "openai>=2.8.0",
+]
 
 [project.scripts]
 names = "names.cli:main"
+tasks = "tasks.cli:main"
 
 [tool.uv]
 package = true
